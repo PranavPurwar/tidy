@@ -5,22 +5,22 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="?colorSurface"
     tools:context=".fragments.IndexFragment">
-
 
     <TextView
         android:id="@+id/progressBarText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="Updating image index"
+        android:text="Updating Image Indexes..."
         android:gravity="center"/>
 
-    <ProgressBar
+    <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="288dp"
-        android:layout_height="75dp"
+        android:layout_width="300dp"
+        android:layout_height="5dp"
+        android:paddingTop="16dp"
         tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="411dp" />
 

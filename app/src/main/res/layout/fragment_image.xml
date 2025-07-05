@@ -8,57 +8,33 @@
     android:orientation="vertical"
     tools:context=".fragments.ImageFragment">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingClass">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Image"
+            app:menu="@menu/photo_viewer" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/labelScoresTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal">
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            tools:ignore="NestedWeights" />
-
-        <TextView
-            android:id="@+id/dateTextView"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="1 Jan, 2023"
-            android:textColor="#DE000000"
-            android:textSize="20sp"
-            android:typeface="normal" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/buttonShare"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="35dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="2dp"
-                app:icon="?attr/actionModeShareDrawable"
-                app:iconSize="28dp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:padding="8dp"
+        android:text="Labels and scores will appear here" />
 
     <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/singeImageView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="83"
-        android:background="#f3f3f3"
         tools:src="@tools:sample/avatars" />
 
     <LinearLayout
@@ -71,7 +47,8 @@
 
         <Button
             android:id="@+id/buttonImage2Image"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"

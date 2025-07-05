@@ -5,7 +5,9 @@
 package com.slavabarkov.tidy.viewmodels
 
 import android.app.Application
+import android.util.Log.i
 import androidx.lifecycle.AndroidViewModel
+import com.google.android.material.math.MathUtils.dist
 import com.slavabarkov.tidy.dot
 
 class SearchViewModel(application: Application) : AndroidViewModel(application) {
@@ -22,6 +24,4 @@ class SearchViewModel(application: Application) : AndroidViewModel(application) 
         }
         searchResults = distances.toList().sortedBy { (k, v) -> v }.map { (k, v) -> k }.reversed()
     }
-
-
 }

@@ -24,7 +24,7 @@ abstract class ImageEmbeddingDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     ImageEmbeddingDatabase::class.java,
-                    "image_embedding_database"
+                    "/storage/emulated/0/Android/data/com.slavabarkov.tidy/image_embedding_database"
                 ).build()
                 INSTANCE = instance
                 return instance
